@@ -7,14 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Header - Full Width -->
+
+  <!-- Top Header -->
   <header class="top-header">
-    <div class="header-content">
-      <img src="Teknovus logo.png" alt="Teknovus Logo">
-    </div>
+    <img src="Teknovus logo.png" alt="Teknovus Logo">
   </header>
 
-  <div class="main-container">
   <!-- Founder Section -->
   <section class="founder">
     <div class="founder-left">
@@ -57,6 +55,8 @@
     </div>
   </section>
 
+</body>
+</html>
 <!-- What We Do Section -->
 <section class="what-we-do">
   <h2>What we do</h2>
@@ -129,10 +129,12 @@
     <!-- Left Side Logos -->
     <div class="innovation-logos">
       <div class="logo-item">
+        <!-- Case corrected: MCHW.png -->
         <img src="MCHW.png" alt="MCHW Technology">
         <p>Magnetic Conditioning of Hard Water</p>
       </div>
       <div class="logo-item">
+        <!-- Case corrected: POM.png -->
         <img src="POM.png" alt="POM NSF Certified">
         <p>Polymerix Oxyionic Media</p>
       </div>
@@ -208,36 +210,35 @@
       <img src="Teknovus product group.png" alt="AKIRA Products">
     </div>
   </div>
-  </section>
-  </div>
+</section>
 
- <!-- Footer - Full Width -->
+ <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content-wrapper">
-      <div class="footer-images">
-        <img src="footer 1.png" alt="Footer Image 1">
-        <img src="footer 2.png" alt="Footer Image 2">
+    <div class="footer-images">
+      <img src="footer 1.png" alt="Footer Image 1">
+      <img src="footer 2.png" alt="Footer Image 2">
+    </div>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>
+          <b>TEKNOVUS SOLUTIONS PVT. LTD.</b><br>
+          Regd. Office: A-124, 1st Floor, Priyadarshini Vihar, Delhi - 110092<br>
+          <img src="call.png" alt="Phone" class="contact-icon"> <span class="phone-copy" onclick="copyToClipboard('+91 99991 99734')">+91 99991 99734</span>, <span class="phone-copy" onclick="copyToClipboard('93109 51510')">93109 51510</span> | <img src="email.png" alt="Email" class="contact-icon"> <span class="phone-copy" onclick="copyToClipboard('sandesh.srivastava707@gmail.com')">sandesh.srivastava707@gmail.com</span>
+        </p>
       </div>
-      <div class="footer-content">
-        <div class="footer-info">
-          <p>
-            <b>TEKNOVUS SOLUTIONS PVT. LTD.</b><br>
-            Regd. Office: A-124, 1st Floor, Priyadarshini Vihar, Delhi - 110092<br>
-            <img src="call.png" alt="Phone" class="contact-icon"> <span class="phone-copy" onclick="copyToClipboard('+91 99991 99734')">+91 99991 99734</span>, <span class="phone-copy" onclick="copyToClipboard('93109 51510')">93109 51510</span> | <img src="email.png" alt="Email" class="contact-icon"> <span class="phone-copy" onclick="copyToClipboard('sandesh.srivastava707@gmail.com')">sandesh.srivastava707@gmail.com</span>
-          </p>
-        </div>
-        <div class="social-section">
-          <span>Social Links :</span>
-          <div class="social">
-            <a href="https://www.facebook.com/teknovusofficial" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/teknovus_official/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com/@Teknovus_solutions" target="_blank"><img src="youtube.png" alt="YouTube"></a>
-            <a href="https://www.linkedin.com/company/teknovus-official/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
-          </div>
+      <div class="social-section">
+        <span>Social Links :</span>
+        <div class="social">
+          <a href="https://www.facebook.com/teknovusofficial" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/teknovus_official/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+          <a href="https://www.youtube.com/@Teknovus_solutions" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+          <a href="https://www.linkedin.com/company/teknovus-official/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
         </div>
       </div>
     </div>
-  </footer>  <script>
+  </footer>
+
+  <script>
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(function() {
         // Show a temporary notification
