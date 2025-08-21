@@ -8,18 +8,6 @@
 body {
   background: #fff;
   color: #333;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-/* Main Container */
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-shadow: 0 0 30px rgba(0,0,0,0.15);
-  background: #fff;
 }
 
 /* Top Header */
@@ -27,12 +15,6 @@ body {
   background: #e5e5e5;
   text-align: center;
   padding: 10px 0;
-  width: 100%;
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .top-header img {
@@ -306,11 +288,11 @@ body {
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  min-width: 650px;
-  flex: 1;
+  min-width: 260px;
+  flex: 1 1 300px;
   max-width: 350px;
   text-align: center;
-  height: 160px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -319,13 +301,11 @@ body {
 }
 
 /* Specific width for Air Purification card (middle card) */
-.sales-card:nth-child(2) {
-  max-width: 280px;
-  min-width: 250px;
-}
+/* Remove rigid special widths to allow natural wrapping */
+.sales-card:nth-child(2),
 .sales-card:nth-child(3) {
-  max-width: 250px;
-  min-width: 580px;
+  max-width: 350px;
+  min-width: 260px;
 }
 
 .sales-card h4 {
@@ -573,15 +553,8 @@ body {
 .footer {
   background: #1e3a5f;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
-  width: 100%;
-}
-
-.footer-content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-images {
@@ -650,16 +623,58 @@ body {
   height: 35px;
 }
 
+@media (max-width: 900px) {
+  /* General layout adjustments */
+  .about { padding: 30px 15px; }
+  .about-left h2 { font-size: 26px; }
+  .about-left p { font-size: 18px; }
+  .what-content { flex-direction: column; gap: 40px; }
+  .cbs-division, .recent-clients { max-width: 100%; }
+  .cbs-division::after { display: none; }
+  .sales-logos { flex-wrap: wrap; transform: none; padding: 0 10px; }
+  .sales-card { flex: 1 1 100%; max-width: 100%; min-width: 0; }
+  .sales-card h4 { font-size: 18px; }
+  .innovation-content { flex-direction: column; }
+  .innovation-logos { grid-template-columns: repeat(2, minmax(120px,1fr)); }
+  .products-content { flex-direction: column; }
+  .footer-images { flex-direction: column; gap: 40px; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .founder { padding: 25px 15px; }
+  .founder-img { width: 140px; }
+  .about-left h2 { font-size: 24px; }
+  .what-we-do { padding: 40px 18px; }
+  .what-we-do h2 { font-size: 24px; }
+  .cbs-division ul { padding-left: 25px; max-width: 100%; }
+  .client-logos { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .innovation-mission h2 { font-size: 26px; }
+  .innovation-logos { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .products-image img { max-width: 90%; }
+  .footer-images { gap: 30px; }
+  .footer .social img { width: 28px; height: 28px; }
+  .footer .social img[alt="Instagram"] { width: 32px; height: 32px; }
+}
+
+@media (max-width: 480px) {
+  .founder-right h2 { font-size: 20px; }
+  .founder-right h3 { font-size: 18px; }
+  .about-left p { font-size: 16px; }
+  .sales-card { padding: 12px; }
+  .sales-card img { max-height: 55px; }
+  .innovation-text { font-size: 14px; }
+  .products-list li { font-size: 15px; }
+  .footer-info p { font-size: 14px; }
+}
+
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  
-  .footer-info {
-    text-align: center;
-  }
+  .footer-info { text-align: center; }
 }
 
 /* Footer Links */
@@ -691,32 +706,4 @@ body {
   height: 20px;
   vertical-align: text-top;
   margin-right: 2px;
-}
-
-/* Large Screen Adjustments */
-@media (min-width: 1600px) {
-  .main-container,
-  .header-content,
-  .footer-content-wrapper {
-    max-width: 1300px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .main-container,
-  .header-content,
-  .footer-content-wrapper {
-    max-width: 1400px;
-  }
-}
-
-/* Small screen adjustments */
-@media (max-width: 768px) {
-  .main-container,
-  .header-content,
-  .footer-content-wrapper {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 10px;
-  }
 }
